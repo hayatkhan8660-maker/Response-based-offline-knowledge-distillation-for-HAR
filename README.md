@@ -1,2 +1,2 @@
-# Response-based-offline-knowledge-distillation-for-HAR
-Unleashing Human Activity Recognition with 3D CNN Knowledge Distillation
+# offline Knowledge Distillation 
+A 3DCNN-Based Knowledge Distillation Framework for Human Activity Recognition
