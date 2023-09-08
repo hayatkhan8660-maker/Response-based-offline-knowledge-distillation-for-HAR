@@ -7,7 +7,7 @@ A 3DCNN-Based Knowledge Distillation Framework for Human Activity Recognition [p
 This repo contains the implementation of our proposed 3DCNN based knowledge distillation approach for human activity recognition, the prerequisite libraries, and the obtained quantiative results across different human activity recognition datasets.  
 
 ## Installation
-This code is written with Anaconda python 3.8. Install the Anaconda python 3.8 and clone the repo using the following command:
+This code is written in python 3.8. Install Anaconda python 3.8 and clone the repo using the following command:
 ```
 git clone https://github.com/hayatkhan8660-maker/Response-based-offline-knowledge-distillation-for-HAR
 ```
