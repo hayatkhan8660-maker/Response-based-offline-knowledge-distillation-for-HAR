@@ -16,7 +16,7 @@ from output import printProgressBar
 output = Output(log_level=0)
 
 # Specify the directory containing the UCF101 dataset.
-DATASET_DIR = "U:/Hayat/Kinetic Dataset/Kinetics400/train/"
+DATASET_DIR = "./Kinetic Dataset/Kinetics400/train/"
 
 # Specify the height and width to which each video frame will be resized in our dataset.
 IMAGE_HEIGHT , IMAGE_WIDTH = 112, 112
@@ -25,7 +25,7 @@ IMAGE_HEIGHT , IMAGE_WIDTH = 112, 112
 SEQUENCE_LENGTH = 16
 
 # Directory to output Processed Numpy Array to
-OUTPUT_DIR = "Frames_dataset/Kinetics_400/"
+OUTPUT_DIR = "./Kinetics_400/"
 
 # Define name for function to get mem info easier
 GET_MEM = psutil.Process(os.getpid()).memory_info
