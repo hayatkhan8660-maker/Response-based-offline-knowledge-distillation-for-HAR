@@ -16,6 +16,7 @@ git clone https://github.com/hayatkhan8660-maker/Response-based-offline-knowledg
 - Python 3.8
 - Tensorflow 2.7
 - Keras 2.7
+- 
 ### Dependencies
 The following libraries need to be installed
 - numpy == 1.24.4
@@ -26,6 +27,9 @@ The following libraries need to be installed
 - scipy == 1.10.1
 
 run ```pip install -r requirements.txt``` to install all the dependencies.
+
+### Data Preparation
+
 
 ## Citation
 Please cite our paper, if you want to reproduce the results using this code.
