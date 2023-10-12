@@ -11,9 +11,19 @@ This code is written in python 3.8. Install Anaconda python 3.8 and clone the re
 ```
 git clone https://github.com/hayatkhan8660-maker/Response-based-offline-knowledge-distillation-for-HAR
 ```
-
+## Prerequisites
+### Recommended Environment
+- Python 3.8
+- Tensorflow 2.7
+- Keras 2.7
 ### Dependencies
-
+The following libraries need to be installed
+- numpy == 1.24.4
+- sklearn == 1.3.0
+- scikitplot == 0.3.7
+- matplotlib == 3.7.3
+- tensorboard == 2.14.0
+- scipy == 1.10.1
 
 ## Citation
 Please cite our paper, if you want to reproduce the results using this code.
