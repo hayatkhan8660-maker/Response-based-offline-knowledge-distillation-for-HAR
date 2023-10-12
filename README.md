@@ -12,7 +12,7 @@ This code is written in python 3.8. Install Anaconda python 3.8 and clone the re
 git clone https://github.com/hayatkhan8660-maker/Response-based-offline-knowledge-distillation-for-HAR
 ```
 
-## Dependencies
+### Dependencies
 
 
 ## Citation
