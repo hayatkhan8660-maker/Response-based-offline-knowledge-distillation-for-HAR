@@ -24,6 +24,7 @@ The following libraries need to be installed
 - matplotlib == 3.7.3
 - tensorboard == 2.14.0
 - scipy == 1.10.1
+
 run ```pip install -r requirements.txt``` to install all the dependencies.
 
 ## Citation
