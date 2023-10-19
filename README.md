@@ -43,7 +43,7 @@ The above ```video_to_frames.py``` file will generate five files. 1) ```Format_T
 
 After preparing all datasets (converting from videos to frames using ```video_to_frames.py``` file), your dataset directory should have the following structure:
 ```
-Frames Dataset
+Frames Datasets
 ├── UCF11
 │   ├── Format_Time.csv
 │   ├── Format_Time_Summary
@@ -72,7 +72,10 @@ Frames Dataset
 Note: Sequence length, frames width, and frame height are subjective, one can choose different values for these arguements. In our work we used (sequence length = 16), (frame height = 224), and (frame width = 224). 
 
 ## Training
-
+Since we proposed an offline knowledge distillation based approach, where a teacher model is pre-trained and a student model yet to be trained. So, before knowledge distillation one must either fintued a pre-trained C3D model on the dataset (same dataset going to use for knowledge distillation) or locally train C3D model from the scratch. In this work, assess both type of teachers in terms of knowledge distillation performance. To train a teacher model run the following command:
+```
+python Teacher_training.py --data Frames_datasets/dataset_name/frames.npy --annotations Frames_datasets/dataset_name/labels.npy --batch_size 8 --epochs 50 --output_path trained_models/model_dir/model_name.h5 --log_path training_histories/model_dir/hist_50 --task fintuning_C3D_Sports1M|train_local_teacher
+```
 ## Citation
 Please cite our paper, if you want to reproduce the results using this code.
 ```
