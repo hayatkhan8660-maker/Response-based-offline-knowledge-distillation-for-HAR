@@ -40,6 +40,8 @@ Before training, we have converted each video dataset to frames data using ```vi
 python video_to_frames.py --input_path Datasets/dataset_name/ --sequence_length 16 --frame_height 224 --frame_width 224 --output_path Output_dataset/dataset_name/
 ``` 
 The above ```video_to_frames.py``` file will generate five files. 1) ```Format_Time.csv``` listing amount of time and memory taken for frames extraction processes per class. 2) ```Format_Time_Summary.txt``` provide the runtime history (in terms of time and memoray allocation) of frames extraction process. 3) ```frames.npy``` contains video frames for the entire dataset (with a skip_frames_window = total_num_frames/sequence_length). 4) ```labels.npy``` contains numerical labels of each video. 5) ```video_file_paths.npy``` contains the path of all videos of a given dataset.
+
+After preparing all datasets (converting from videos to frames using ```video_to_frames.py``` file), your dataset directory should of the following structure:
 ```
 Frames Dataset
 ├── UCF11
