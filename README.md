@@ -70,6 +70,9 @@ Frames Dataset
 │   ├── video_file_paths.npy
 ```
 Note: Sequence length, frames width, and frame height are subjective, one can choose different values for these arguements. In our work we used (sequence length = 16), (frame height = 224), and (frame width = 224). 
+
+## Training
+
 ## Citation
 Please cite our paper, if you want to reproduce the results using this code.
 ```
