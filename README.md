@@ -41,6 +41,34 @@ python video_to_frames.py --input_path Datasets/dataset_name/ --sequence_length 
 ```
 Note: Sequence length, frames width, and frame height are subjective, one can choose different values for these arguements. In our work we used (sequence length = 16), (frame height = 224), and (frame width = 224). 
 
+```
+Frames Dataset
+├── UCF11
+│   ├── Format_Time.csv
+│   ├── Format_Time_Summary
+|   ├── frames.npy
+|   ├── labels.npy
+|   ├── video_file_paths.npy
+├── UCF50
+│   ├── Format_Time.csv
+│   ├── Format_Time_Summary
+│   ├── frames.npy
+│   ├── labels.npy
+│   ├── video_file_paths.npy
+├── HMDB51
+│   ├── Format_Time.csv
+│   ├── Format_Time_Summary
+│   ├── frames.npy
+│   ├── labels.npy
+│   ├── video_file_paths.npy
+├── UCF101
+│   ├── Format_Time.csv
+│   ├── Format_Time_Summary
+│   ├── frames.npy
+│   ├── labels.npy
+│   ├── video_file_paths.npy
+
+```
 ## Citation
 Please cite our paper, if you want to reproduce the results using this code.
 ```
