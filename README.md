@@ -29,7 +29,8 @@ The following libraries need to be installed
 run ```pip install -r requirements.txt``` to install all the dependencies.
 
 ### Data Preparation
-
+We have conducted experiments on four HAR datasets, including UCF11, UCF50, HMDB51, and UCF101 datasets. 
+- UCF11 [dataset link](https://www.crcv.ucf.edu/data/UCF_YouTube_Action.php)
 
 ## Citation
 Please cite our paper, if you want to reproduce the results using this code.
