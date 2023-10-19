@@ -43,9 +43,9 @@ val_generator = TrainGenerator(test_x, test_y, batch_size)
 nb_classes = 101
 
 source_model = networks.C3D(weights='sports1M')
-print(source_model.layers)
-print(len(source_model.layers))
+source_model.summary()
 
+# freeze the first 19 layers 
 for layer in source_model.layers[:19]:
   layer.trainable = False
 
