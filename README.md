@@ -34,7 +34,12 @@ We have conducted experiments on four HAR datasets, including UCF11, UCF50, HMDB
 - UCF50 [dataset link](https://www.crcv.ucf.edu/data/UCF50.php)
 - HMDB51 [dataset link](https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/#dataset)
 - UCF101 [dataset link](https://www.crcv.ucf.edu/data/UCF101.php)
+
 Before training, we have converted each video dataset to frames data using ```video_to_frames.py``` file as follows: 
+```
+python video_to_frames.py --input_path Datasets/dataset_name/ --sequence_length 16 --frame_height 224 --frame_width 224 --output_path Output_dataset/dataset_name/
+```
+
 ## Citation
 Please cite our paper, if you want to reproduce the results using this code.
 ```
