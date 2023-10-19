@@ -80,7 +80,7 @@ python Teacher_training.py --data Frames_datasets/dataset_name/frames.npy --anno
 ```
 python Teacher_training.py --data Frames_datasets/dataset_name/frames.npy --annotations Frames_datasets/dataset_name/labels.npy --batch_size 8 --epochs 50 --output_path trained_models/model_dir/model_name.h5 --log_path training_histories/model_dir/hist_50 --task fintuning_C3D_Sports1M
 ```
-### Training C3D Teacher from the scratch
+### Training C3D Teacher from scratch
 ```
 python Teacher_training.py --data Frames_datasets/dataset_name/frames.npy --annotations Frames_datasets/dataset_name/labels.npy --batch_size 8 --epochs 50 --output_path trained_models/model_dir/model_name.h5 --log_path training_histories/model_dir/hist_50 --task train_local_teacher
 ```
