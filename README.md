@@ -32,7 +32,7 @@ run ```pip install -r requirements.txt``` to install all the dependencies.
 We have conducted experiments on four HAR datasets, including UCF11, UCF50, HMDB51, and UCF101 datasets. 
 - UCF11 [dataset link](https://www.crcv.ucf.edu/data/UCF_YouTube_Action.php)
 - UCF50 [dataset link](https://www.crcv.ucf.edu/data/UCF50.php)
-- HMDB51 [dataset link]()
+- HMDB51 [dataset link](https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/#dataset)
 - UCF101 [dataset link](https://www.crcv.ucf.edu/data/UCF101.php)
 
 ## Citation
