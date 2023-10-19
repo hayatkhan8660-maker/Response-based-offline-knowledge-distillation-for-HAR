@@ -38,9 +38,6 @@ all_classes_names = sorted(os.listdir(DATASET_DIR))
 
 # Specify the list containing the names of the classes used for training. Feel free to choose any set of classes.
 CLASSES_LIST = all_classes_names
-#CLASSES_LIST = random.sample(all_classes_names, 50)
-#CLASSES_LIST = ["WalkingWithDog", "TaiChi", "Swing", "HorseRace"]
-#CLASSES_LIST = ["PushUps"]
 
 def frames_extraction(video_path):
     '''
