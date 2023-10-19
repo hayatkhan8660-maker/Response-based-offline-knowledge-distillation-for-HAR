@@ -8,24 +8,33 @@ import time
 import psutil
 import random
 import numpy as np
-
+import argparse
 from output import Output
 from output import printProgressBar
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--input_path', type=str, required=True, help="path to input video dataset")
+parser.add_argument('--sequence_length', type=int, required=True, help="number of frames per sequence")
+parser.add_argument('--frame_height', type=int, required=True, help="height of the video frames")
+parser.add_argument('--frame_width', type=int, required=True, help="width of the video frames")
+parser.add_argument('--output_path', type=str, required=True, help="path to output frame dataset")
+
+args = parser.parse_args()
 
 # Create output object to store and output data
 output = Output(log_level=0)
 
 # Specify the directory containing the UCF101 dataset.
-DATASET_DIR = "../UCF101/"
+DATASET_DIR = args.input_path
 
 # Specify the height and width to which each video frame will be resized in our dataset.
-IMAGE_HEIGHT , IMAGE_WIDTH = 112, 112
+IMAGE_HEIGHT , IMAGE_WIDTH = args.frame_height, args.frame_width
 
 # Specify the number of frames of a video that will be fed to the model as one sequence.
-SEQUENCE_LENGTH = 16
+SEQUENCE_LENGTH = args.sequence_length
 
 # Directory to output Processed Numpy Array to
-OUTPUT_DIR = "./Frames_dataset/UCF101/"
+OUTPUT_DIR = args.output_path
 
 # Define name for function to get mem info easier
 GET_MEM = psutil.Process(os.getpid()).memory_info
