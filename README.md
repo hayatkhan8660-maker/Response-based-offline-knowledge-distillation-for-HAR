@@ -38,9 +38,8 @@ We have conducted experiments on four HAR datasets, including UCF11, UCF50, HMDB
 Before training, we have converted each video dataset to frames data using ```video_to_frames.py``` file as follows: 
 ```
 python video_to_frames.py --input_path Datasets/dataset_name/ --sequence_length 16 --frame_height 224 --frame_width 224 --output_path Output_dataset/dataset_name/
-```
-Note: Sequence length, frames width, and frame height are subjective, one can choose different values for these arguements. In our work we used (sequence length = 16), (frame height = 224), and (frame width = 224). 
-
+``` 
+The above ```video_to_frames.py``` file will generate five files. 1) ```Format_Time.csv``` listing amount of time and memory taken for frames extraction processes per class. 2) ```Format_Time_Summary.txt``` provide the runtime history (in terms of time and memoray allocation) of frames extraction process. 3) ```frames.npy``` contains video frames for the entire dataset (i.e., 16 frames for each video, with a skip_frames_window = total_num_frames/sequence_length). 4) ```labels.npy``` contains numerical labels of each video. 5) ```labels.npy``` contains the path of all videos of a given dataset.
 ```
 Frames Dataset
 ├── UCF11
@@ -67,8 +66,8 @@ Frames Dataset
 │   ├── frames.npy
 │   ├── labels.npy
 │   ├── video_file_paths.npy
-
 ```
+Note: Sequence length, frames width, and frame height are subjective, one can choose different values for these arguements. In our work we used (sequence length = 16), (frame height = 224), and (frame width = 224). 
 ## Citation
 Please cite our paper, if you want to reproduce the results using this code.
 ```
