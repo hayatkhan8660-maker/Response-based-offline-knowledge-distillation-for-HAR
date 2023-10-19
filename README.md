@@ -39,6 +39,7 @@ Before training, we have converted each video dataset to frames data using ```vi
 ```
 python video_to_frames.py --input_path Datasets/dataset_name/ --sequence_length 16 --frame_height 224 --frame_width 224 --output_path Output_dataset/dataset_name/
 ```
+Note: Sequence length, frames width, and frame height are subjective, one can choose different values for these arguements. In our work we used (sequence length = 16), (frame height = 224), and (frame width = 224). 
 
 ## Citation
 Please cite our paper, if you want to reproduce the results using this code.
