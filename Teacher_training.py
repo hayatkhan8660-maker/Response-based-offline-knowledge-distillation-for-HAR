@@ -36,7 +36,7 @@ args = parser.parse_args()
 dataset_frames = np.load(args.data)
 dataset_labels = np.load(args.annotations)
 
-# Split features and labels into training and testing data with 80% training and 20% testing data
+# Split frames and labels into training and testing data with 80% training and 20% testing data
 train_x, test_x, train_y, test_y = train_test_split(dataset_frames, dataset_labels, test_size = 0.20, shuffle = True)
 
 batch_size = args.batch_size
