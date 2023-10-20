@@ -124,7 +124,7 @@ python eval.py --data Frames_dataset/UCF101/frames.npy --annotations Frames_data
 ```
 Comparative results of our method and other state-of-the-art cnn architectures on our newly created fire segmentation dataset.
 
-| Model  | Dataset | Accuracy |                                   
+| Model  | Dataset | Accuracy (%)|                                   
 | ------------- | ------------- | ------------- |                 
 | Student w/o KD   | UCF11  | 88.71 |                             
 | TFS Teacher  | UCF11  | 95.86 |
@@ -139,6 +139,22 @@ Comparative results of our method and other state-of-the-art cnn architectures o
 | Student<sub>3DCNN</sub>-TUTL (T=10) | UCF11 | 98.78|
 | Student<sub>3DCNN</sub>-TUTL (T=15) | UCF11 | 98.17|
 | Student<sub>3DCNN</sub>-TUTL (T=20) | UCF11 | 97.88|
+
+| Model  | Dataset | Accuracy (%) |                                   
+| ------------- | ------------- | ------------- |                 
+| Student w/o KD   | UCF50  | 95.81 |                             
+| TFS Teacher  | UCF50  | 96.40 |
+| TUTL Teacher | UCF50 | 98.37 | 
+| Student<sub>3DCNN</sub>-TFS (T=1) | UCF50 | 96.25|
+| Student<sub>3DCNN</sub>-TFS (T=5) | UCF50 | 96.70|
+| Student<sub>3DCNN</sub>-TFS (T=10) | UCF50 | 97.60|
+| Student<sub>3DCNN</sub>-TFS (T=15) | UCF50 | 96.91|
+| Student<sub>3DCNN</sub>-TFS (T=20) | UCF50 | 97.21|
+| Student<sub>3DCNN</sub>-TUTL (T=1) | UCF50 | 96.65|
+| Student<sub>3DCNN</sub>-TUTL (T=5) | UCF50 | 97.15|
+| Student<sub>3DCNN</sub>-TUTL (T=10) | UCF50 | 97.71|
+| Student<sub>3DCNN</sub>-TUTL (T=15) | UCF50 | 97.53|
+| Student<sub>3DCNN</sub>-TUTL (T=20) | UCF50 | 97.64|
 ## Citation
 Please cite our paper, if you want to reproduce the results using this code.
 ```
