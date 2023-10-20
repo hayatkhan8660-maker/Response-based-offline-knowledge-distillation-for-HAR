@@ -93,7 +93,7 @@ python Teacher_training.py --data Frames_datasets/dataset_name/frames.npy --anno
 python Teacher_training.py --data Frames_datasets/dataset_name/frames.npy --annotations Frames_datasets/dataset_name/labels.npy --batch_size 8 --epochs 50 --output_path trained_models/model_dir/model_name.h5 --log_path training_histories/model_dir/hist_50 --task train_local_teacher
 ```
 ### Knowledge Distillation Training
-The knowledge distillation training file can be find with the name ``` KD_training.py ```. To start knowledge distillation training, run the follwing command.
+The knowledge distillation training file can be find with the name ``` KD_training.py ```. To start knowledge distillation training, run the follwing command:
 ```
 python KD_training.py --data [path/././] --annotations [path/././] --batch_size [some postive integer] --epochs [some positive integer] --temperature [some positive integer] --source [oath/././] --output_path [path/././] --log_path [path/././]
 ```
@@ -106,9 +106,21 @@ python KD_training.py --data [path/././] --annotations [path/././] --batch_size 
 - ``` --output_path ``` path to directory for saving trained model (file extension should be .h5)
 - ``` --log_path ``` path to directory for saving trained training history (file extension should be .npy)
 
-For instance, to train student 3DCNN model under the supervision of finetuned C3D teacher model (reffered as TUTL in paper), run the following command. 
+For instance, to train student 3DCNN model under the supervision of finetuned C3D teacher model (reffered as TUTL in paper), run the following command: 
 ```
 python KD_training.py --data Frames_dataset/UCF101/frames.npy --annotations Frames_dataset/UCF101/labels.npy --batch_size 8 --epochs 100 --temperature 10 --source trained_models/UCF50/pretrained_C3D_teacher_S1M_UCF101.h5 --output_path KD_trained_models/UCF101/KD_student_trained_UCF101.h5 --log_path KD_training_histories/UCF101/KD_train_hist_UCF101
+```
+## Evaluation of Trained Models
+To evaluate trained models, run the ```eval.py``` using following command:
+```
+python eval.py --data [path/././] --annotations [path/././]  --recognizer [path/././]
+```
+- ``` --data ``` path to test data (one can load the entire dataset and later split the dataset into training and test sets.)
+- ``` --annotations ``` path to annotations of test data (labels per videos for the test set)
+- ``` --recognizer ``` path to the trained model
+For instance, to evaluate a trained model (trained on UCF101 dataset) on the test set of UCF101 dataset, run the above command as follows:
+```
+python eval.py --data Frames_dataset/UCF101/frames.npy --annotations Frames_dataset/UCF101/labels.npy --recognizer trained_models_data/UCF101/Models/Student_with_KD_T10_under_Teacher_with_pretrained_weights_UCF101.h5
 ```
 ## Citation
 Please cite our paper, if you want to reproduce the results using this code.
