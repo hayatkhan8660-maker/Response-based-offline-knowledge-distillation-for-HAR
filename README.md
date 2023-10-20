@@ -129,13 +129,11 @@ Comparative results of our method and other state-of-the-art cnn architectures o
 | Student w/o KD   | UCF11  | 88.71 | 
 | TFS Teacher  | UCF11  | 95.86 |
 | TUTL Teacher | UCF11 | 99.70 | 
-| ------------- | ------------- | ------------- |
 | Student<sub>3DCNN</sub>-TFS (T=1) | UCF11 | 95.73|
 | Student<sub>3DCNN</sub>-TFS (T=5) | UCF11 | 96.84|
 | Student<sub>3DCNN</sub>-TFS (T=10) | UCF11 | 97.56|
 | Student<sub>3DCNN</sub>-TFS (T=15) | UCF11 | 96.43|
 | Student<sub>3DCNN</sub>-TFS (T=20) | UCF11 | 96.58|
-| ------------- | ------------- | ------------- |
 | Student<sub>3DCNN</sub>-TUTL (T=1) | UCF11 | 95.12|
 | Student<sub>3DCNN</sub>-TUTL (T=5) | UCF11 | 97.45|
 | Student<sub>3DCNN</sub>-TUTL (T=10) | UCF11 | 98.78|
