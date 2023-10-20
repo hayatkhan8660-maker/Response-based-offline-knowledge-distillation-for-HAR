@@ -76,13 +76,13 @@ Since we proposed an offline knowledge distillation based approach, where a teac
 ```
 python Teacher_training.py --data [path/././] --annotations [path/././] --batch_size [some postive integer] --epochs [some positive integer] --output_path [path/././] --log_path [path/././] --task [task name]
 ```
-``` --data ``` path to training data (containing video frames)
-``` --annotations ``` path to annotations of training data (labels per videos for the entire dataset)
-``` --batch_size ``` size of the batch (can be choose based on the size of dataset and available computational resources)
-``` --epochs ``` number of epochs for training a model 
-``` --output_path ``` path to directory for saving trained model (file extension should be .h5)
-``` --log_path ``` path to directory for saving trained training history (file extension should be .npy)
-``` --task ``` takes task either (fintuning_C3D_Sports1M) for finetuning pre-trained C3D Teacher model previously trained on Sports 1Million Dataset or (train_local_teacher) for training C3D Teacher model from scratch.
+- ``` --data ``` path to training data (containing video frames)
+- ``` --annotations ``` path to annotations of training data (labels per videos for the entire dataset)
+- ``` --batch_size ``` size of the batch (can be choose based on the size of dataset and available computational resources)
+- ``` --epochs ``` number of epochs for training a model 
+- ``` --output_path ``` path to directory for saving trained model (file extension should be .h5)
+- ``` --log_path ``` path to directory for saving trained training history (file extension should be .npy)
+- ``` --task ``` takes task either (fintuning_C3D_Sports1M) for finetuning pre-trained C3D Teacher model previously trained on Sports 1Million Dataset or (train_local_teacher) for training C3D Teacher model from scratch.
 
 ### Fintuning Pre-trained C3D Teacher
 ```
