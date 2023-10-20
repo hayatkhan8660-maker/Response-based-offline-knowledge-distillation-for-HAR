@@ -82,7 +82,7 @@ python Teacher_training.py --data [path/././] --annotations [path/././] --batch_
 - ``` --epochs ``` number of epochs for training a model 
 - ``` --output_path ``` path to directory for saving trained model (file extension should be .h5)
 - ``` --log_path ``` path to directory for saving trained training history (file extension should be .npy)
-- ``` --task ``` takes task either (fintuning_C3D_Sports1M) for finetuning pre-trained C3D Teacher model previously trained on Sports 1Million Dataset or (train_local_teacher) for training C3D Teacher model from scratch.
+- ``` --task ``` takes task either (fintuning_C3D_Sports1M) for finetuning pre-trained C3D teacher model previously trained on Sports 1Million Dataset or (train_local_teacher) for training C3D teacher model from scratch.
 
 ### Fintuning Pre-trained C3D Teacher
 ```
@@ -93,6 +93,19 @@ python Teacher_training.py --data Frames_datasets/dataset_name/frames.npy --anno
 python Teacher_training.py --data Frames_datasets/dataset_name/frames.npy --annotations Frames_datasets/dataset_name/labels.npy --batch_size 8 --epochs 50 --output_path trained_models/model_dir/model_name.h5 --log_path training_histories/model_dir/hist_50 --task train_local_teacher
 ```
 ### Knowledge Distillation Training
+The knowledge distillation training file can be find with the name ``` KD_training.py ```. To start knowledge distillation training, run the follwing command.
+```
+python KD_training.py --data [path/././] --annotations [path/././] --batch_size [some postive integer] --epochs [some positive integer] --temperature [some positive integer] --source [oath/././] --output_path [path/././] --log_path [path/././]
+```
+- ``` --data ``` path to training data (containing video frames)
+- ``` --annotations ``` path to annotations of training data (labels per videos for the entire dataset)
+- ``` --batch_size ``` size of the batch (can be choose based on the size of dataset and available computational resources)
+- ``` --epochs ``` number of epochs for training a model
+- ``` --temperature ``` takes an integer value used for smoothing the softmax probabilities. The smoothen pobabilities of teacher and student models help in the convergence of distillation loss.
+- ``` --source ``` path to trained teacher model (either finetuned C3D teacher model or locally trained C3D teacher model from the scratch). 
+- ``` --output_path ``` path to directory for saving trained model (file extension should be .h5)
+- ``` --log_path ``` path to directory for saving trained training history (file extension should be .npy)
+
 ## Citation
 Please cite our paper, if you want to reproduce the results using this code.
 ```
