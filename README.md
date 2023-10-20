@@ -124,37 +124,23 @@ python eval.py --data Frames_dataset/UCF101/frames.npy --annotations Frames_data
 ```
 Comparative results of our method and other state-of-the-art cnn architectures on our newly created fire segmentation dataset.
 
-| Model  | Dataset | Accuracy (%)|                                   
-| ------------- | ------------- | ------------- |                 
-| Student w/o KD   | UCF11  | 88.71 |                             
-| TFS Teacher  | UCF11  | 95.86 |
-| TUTL Teacher | UCF11 | 99.70 | 
-| Student<sub>3DCNN</sub>-TFS (T=1) | UCF11 | 95.73|
-| Student<sub>3DCNN</sub>-TFS (T=5) | UCF11 | 96.84|
-| Student<sub>3DCNN</sub>-TFS (T=10) | UCF11 | 97.56|
-| Student<sub>3DCNN</sub>-TFS (T=15) | UCF11 | 96.43|
-| Student<sub>3DCNN</sub>-TFS (T=20) | UCF11 | 96.58|
-| Student<sub>3DCNN</sub>-TUTL (T=1) | UCF11 | 95.12|
-| Student<sub>3DCNN</sub>-TUTL (T=5) | UCF11 | 97.45|
-| Student<sub>3DCNN</sub>-TUTL (T=10) | UCF11 | 98.78|
-| Student<sub>3DCNN</sub>-TUTL (T=15) | UCF11 | 98.17|
-| Student<sub>3DCNN</sub>-TUTL (T=20) | UCF11 | 97.88|
+| Model  | UCF11 | UCF50| HMDB51 | UCF101 |                                  
+| ------------- | ------------- | ------------- | ------------- | ------------- |               
+| Student w/o KD | 88.71 | 95.81 | 88.24 | 93.74 |                           
+| TFS Teacher | 95.86 | 96.40 | 90.67 | 95.04 |
+| TUTL Teacher | 99.70 | 98.37 | 93.10 | 98.83 |
+| Student<sub>3DCNN</sub>-TFS (T=1) | 95.73| 96.25 | 88.62 | 95.11 |
+| Student<sub>3DCNN</sub>-TFS (T=5) | 96.84 | 96.70 | 88.25 | 95.64 |
+| Student<sub>3DCNN</sub>-TFS (T=10) | 97.56 | 97.60 | 91.55 | 96.73 |
+| Student<sub>3DCNN</sub>-TFS (T=15) | 96.43 | 96.91 | 87.22 | 96.11 |
+| Student<sub>3DCNN</sub>-TFS (T=20) | 96.58 | 97.21 | 86.92 | 96.20 |
+| Student<sub>3DCNN</sub>-TUTL (T=1) | 95.12 | 96.65 | 89.80 | 96.24 |
+| Student<sub>3DCNN</sub>-TUTL (T=5) | 97.45 | 97.15 | 89.14 | 96.80 |
+| Student<sub>3DCNN</sub>-TUTL (T=10) | 98.78 | 97.71 | 92.89 | 97.36 |
+| Student<sub>3DCNN</sub>-TUTL (T=15) | 98.17 | 97.53 | 89.43 | 96.58 |
+| Student<sub>3DCNN</sub>-TUTL (T=20) | 97.88 | 97.64 | 89.66 | 95.90 |
 
-| Model  | Dataset | Accuracy (%) |                                   
-| ------------- | ------------- | ------------- |                 
-| Student w/o KD   | UCF50  | 95.81 |                             
-| TFS Teacher  | UCF50  | 96.40 |
-| TUTL Teacher | UCF50 | 98.37 | 
-| Student<sub>3DCNN</sub>-TFS (T=1) | UCF50 | 96.25|
-| Student<sub>3DCNN</sub>-TFS (T=5) | UCF50 | 96.70|
-| Student<sub>3DCNN</sub>-TFS (T=10) | UCF50 | 97.60|
-| Student<sub>3DCNN</sub>-TFS (T=15) | UCF50 | 96.91|
-| Student<sub>3DCNN</sub>-TFS (T=20) | UCF50 | 97.21|
-| Student<sub>3DCNN</sub>-TUTL (T=1) | UCF50 | 96.65|
-| Student<sub>3DCNN</sub>-TUTL (T=5) | UCF50 | 97.15|
-| Student<sub>3DCNN</sub>-TUTL (T=10) | UCF50 | 97.71|
-| Student<sub>3DCNN</sub>-TUTL (T=15) | UCF50 | 97.53|
-| Student<sub>3DCNN</sub>-TUTL (T=20) | UCF50 | 97.64|
+
 ## Citation
 Please cite our paper, if you want to reproduce the results using this code.
 ```
