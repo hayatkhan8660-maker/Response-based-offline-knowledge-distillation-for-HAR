@@ -122,6 +122,25 @@ For instance, to evaluate a trained model (trained on UCF101 dataset) on the tes
 ```
 python eval.py --data Frames_dataset/UCF101/frames.npy --annotations Frames_dataset/UCF101/labels.npy --recognizer trained_models_data/UCF101/Models/Student_with_KD_T10_under_Teacher_with_pretrained_weights_UCF101.h5
 ```
+Comparative results of our method and other state-of-the-art cnn architectures on our newly created fire segmentation dataset.
+
+| Model  | Dataset | Accuracy | 
+| ------------- | ------------- | ------------- |    
+| Student w/o KD   | UCF11  | 88.71 | 
+| TFS Teacher  | UCF11  | 95.86 |
+| TUTL Teacher | UCF11 | 99.70 | 
+| ------------- | ------------- | ------------- |
+| Student<sub>3DCNN</sub>-TFS (T=1) | UCF11 | 95.73|
+| Student<sub>3DCNN</sub>-TFS (T=5) | UCF11 | 96.84|
+| Student<sub>3DCNN</sub>-TFS (T=10) | UCF11 | 97.56|
+| Student<sub>3DCNN</sub>-TFS (T=15) | UCF11 | 96.43|
+| Student<sub>3DCNN</sub>-TFS (T=20) | UCF11 | 96.58|
+| ------------- | ------------- | ------------- |
+| Student<sub>3DCNN</sub>-TUTL (T=1) | UCF11 | 95.12|
+| Student<sub>3DCNN</sub>-TUTL (T=5) | UCF11 | 97.45|
+| Student<sub>3DCNN</sub>-TUTL (T=10) | UCF11 | 98.78|
+| Student<sub>3DCNN</sub>-TUTL (T=15) | UCF11 | 98.17|
+| Student<sub>3DCNN</sub>-TUTL (T=20) | UCF11 | 97.88|
 ## Citation
 Please cite our paper, if you want to reproduce the results using this code.
 ```
