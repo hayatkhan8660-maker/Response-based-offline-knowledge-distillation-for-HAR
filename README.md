@@ -82,7 +82,7 @@ python Teacher_training.py --data [path/././] --annotations [path/././] --batch_
 - ``` --epochs ``` number of epochs for training a model 
 - ``` --output_path ``` path to directory for saving trained model (file extension should be .h5)
 - ``` --log_path ``` path to directory for saving trained training history (file extension should be .npy)
-- ``` --task ``` takes task either (fintuning_C3D_Sports1M) for finetuning pre-trained C3D teacher model previously trained on Sports 1Million Dataset or (train_local_teacher) for training C3D teacher model from scratch.
+- ``` --task ``` takes task either (fintuning_C3D_Sports1M) for finetuning pre-trained C3D teacher model (reffered as TUTL in paper) previously trained on Sports 1Million Dataset or (train_local_teacher) for training C3D teacher model (reffered as TFS in paper) from scratch.
 
 ### Fintuning Pre-trained C3D Teacher
 ```
@@ -102,10 +102,14 @@ python KD_training.py --data [path/././] --annotations [path/././] --batch_size 
 - ``` --batch_size ``` size of the batch (can be choose based on the size of dataset and available computational resources)
 - ``` --epochs ``` number of epochs for training a model
 - ``` --temperature ``` takes an integer value used for smoothing the softmax probabilities. The smoothen pobabilities of teacher and student models help in the convergence of distillation loss.
-- ``` --source ``` path to trained teacher model (either finetuned C3D teacher model or locally trained C3D teacher model from the scratch). 
+- ``` --source ``` path to trained teacher model (either finetuned C3D teacher model (reffered as TUTL in paper) or locally trained C3D teacher model (reffered as TFS in paper) from the scratch). 
 - ``` --output_path ``` path to directory for saving trained model (file extension should be .h5)
 - ``` --log_path ``` path to directory for saving trained training history (file extension should be .npy)
 
+For instance, to train student 3DCNN model under the supervision of finetuned C3D teacher model (reffered as TUTL in paper), run the following command. 
+```
+python KD_training.py --data Frames_dataset/UCF101/frames.npy --annotations Frames_dataset/UCF101/labels.npy --batch_size 8 --epochs 100 --temperature 10 --source trained_models/UCF50/pretrained_C3D_teacher_S1M_UCF101.h5 --output_path KD_trained_models/UCF101/KD_student_trained_UCF101.h5 --log_path KD_training_histories/UCF101/KD_train_hist_UCF101
+```
 ## Citation
 Please cite our paper, if you want to reproduce the results using this code.
 ```
