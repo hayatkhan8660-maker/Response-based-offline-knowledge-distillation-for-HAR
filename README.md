@@ -124,9 +124,9 @@ python eval.py --data Frames_dataset/UCF101/frames.npy --annotations Frames_data
 ```
 Comparative results of our method and other state-of-the-art cnn architectures on our newly created fire segmentation dataset.
 
-| Model  | Dataset | Accuracy | 
-| ------------- | ------------- | ------------- |    
-| Student w/o KD   | UCF11  | 88.71 | 
+| Model  | Dataset | Accuracy |                                   | Model  | Dataset | Accuracy | 
+| ------------- | ------------- | ------------- |                 | ------------- | ------------- | ------------- |
+| Student w/o KD   | UCF11  | 88.71 |                             | Student w/o KD   | UCF11  | 88.71 | 
 | TFS Teacher  | UCF11  | 95.86 |
 | TUTL Teacher | UCF11 | 99.70 | 
 | Student<sub>3DCNN</sub>-TFS (T=1) | UCF11 | 95.73|
