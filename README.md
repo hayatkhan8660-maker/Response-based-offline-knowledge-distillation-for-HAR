@@ -122,7 +122,7 @@ For instance, to evaluate a trained model (trained on UCF101 dataset) on the tes
 ```
 python eval.py --data Frames_dataset/UCF101/frames.npy --annotations Frames_dataset/UCF101/labels.npy --recognizer trained_models_data/UCF101/Models/Student_with_KD_T10_under_Teacher_with_pretrained_weights_UCF101.h5
 ```
-Comparative results of our method and other state-of-the-art cnn architectures on our newly created fire segmentation dataset.
+Quantitative comparison of the obtained accuracies with different models and settings on UCF11, UCF50, HMDB51, and UCF101 datasets.
 
 | Model  | UCF11 | UCF50| HMDB51 | UCF101 |                                  
 | ------------- | ------------- | ------------- | ------------- | ------------- |               
